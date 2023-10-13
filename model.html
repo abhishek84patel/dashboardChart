@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>module</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            background-image: url(https://wp-mktg.prod.getty1.net/istockcontentredesign/wp-content/uploads/sites/5/bfi_thumb/2021_iStock_LatestBGTrends_Hero.jpg-37hacs394rfnlye6q17b1otbsizghpa9fhni65z6lb6gploak.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+
+        .popup {
+
+            display: flex;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            visibility: hidden;
+        }
+
+        form {
+
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 0px 20px rgb(99 95 95 / 56%);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form img {
+            width: 100px;
+            margin: auto;
+            display: block;
+        }
+
+        form ul {
+            list-style: none;
+        }
+
+        form h3 {
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            position: relative;
+        }
+
+        form h3 span {
+            position: absolute;
+            right: 0;
+            color: red;
+            cursor: pointer;
+        }
+
+        form ul li a {
+            color: #3949f9;
+            text-decoration: none;
+        }
+
+        form ul li a:hover {
+            color: #1421ae;
+            text-decoration: underline;
+        }
+
+
+        form input {
+            margin-bottom: 10px;
+            width: 300px;
+            padding: 5px;
+
+
+        }
+
+
+        form input[type="button"] {
+            width: 100%;
+            margin-top: 10px;
+            color: inherit;
+            background-color: rgb(77, 184, 216);
+            border: 2px solid transparent;
+            border-radius: 5px;
+
+        }
+
+        form input[type="button"]:hover {
+            background: transparent;
+            border: 2px solid black;
+        }
+    </style>
+    <div class="popup">
+        <form action="">
+            <ul>
+
+                <li>
+
+                    <h3>login now <span onclick="closePop()">x</span></h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="">
+                </li>
+                <li>
+
+                    <input type="text" placeholder="Your Email or Phone">
+                </li>
+                <li>
+
+                    <input type="text" placeholder="Your Email or Phone">
+                </li>
+                <li>
+                    <a href="#">forget password</a>
+
+                </li>
+                <li>
+
+                    <input type="button" value="Login">
+                </li>
+                <li>
+
+                    <p>Not a member <a href="">Signup now</a></p>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <script>
+        const popup = document.querySelector(".popup");
+        function showPop() {
+            popup.style.visibility = "visible";
+
+        }
+        setTimeout(showPop, 1000)
+        function closePop() {
+            popup.style.visibility = "hidden"
+        }
+    </script>
+</body>
+
+</html>
